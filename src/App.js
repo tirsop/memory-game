@@ -16,12 +16,15 @@ function App() {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
+  const [disabled, setDisabled] = useState(false) // to prevent the user to make lots of clicks
 
   // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
+    setChoiceOne(null) // so choices are reset when pressing NewGame
+    setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
   }
@@ -34,6 +37,7 @@ function App() {
   // compare 2 selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {     // only execute code when we have the 2 choices
+      setDisabled(true)
       if (choiceOne.src === choiceTwo.src) {
         setCards(prevCards => {
           return prevCards.map(card => {
@@ -46,16 +50,22 @@ function App() {
         })
         resetTurn()
       } else {
-        resetTurn()
+        setTimeout(() => resetTurn(), 1000)
       }
     }
   }, [choiceOne, choiceTwo])
-  console.log(cards);
+
   const resetTurn = () => {
     setChoiceOne(null)
     setChoiceTwo(null)
     setTurns(prevTurns => prevTurns + 1)
+    setDisabled(false)
   }
+
+  // start a new game as soos as Ienter the page
+  useEffect(() => {
+    shuffleCards()
+  }, [])
 
   return (
     <div className="App">
@@ -63,14 +73,17 @@ function App() {
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
-        {cards.map((card) =>
+        {cards.map(card =>
           <SingleCard
             key={card.id}
             card={card}
             handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disabled={disabled}
           />
         )}
       </div>
+      <p>Turns: {turns}</p>
     </div>
   );
 }
