@@ -30,6 +30,18 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false) // to prevent the user to make lots of clicks
 
+  // function that return X random elements of an array
+  const random = (array, elements) => {
+    const result = []
+    for (let i = 0; i < elements; i++) {
+      const element = Math.floor(Math.random() * array.length)
+      result.push(array[element])
+      array.splice(element, 1)
+    }
+    return result
+  }
+
+
   // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
   const shuffleCards = () => {
     const shuffledCards = [...countries, ...capitals]
