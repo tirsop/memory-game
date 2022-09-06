@@ -44,7 +44,9 @@ function App() {
 
   // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
   const shuffleCards = () => {
+    console.log({ countries })
     const countryCards = random(countries, 6)
+    console.log({ countryCards })
     const capitalCards = countryCards.map(country => (
       capitals.find(capital => (
         capital.country === country.country

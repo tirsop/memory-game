@@ -1,7 +1,5 @@
 .card {
   position: relative;
-
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,7 +10,8 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 20px;
+
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card img {
@@ -33,10 +32,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
+
 }
 .card .back {
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
+  border-radius: 20px;
 }
 .flipped .back {
   transform: rotateY(90deg);

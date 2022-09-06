@@ -1,6 +1,12 @@
 .App {
+  height: 100vh;
   max-width: 860px;
-  margin: 40px auto;
+  margin: 40px auto 0;
+  background-image: url('../public/img/skyline.png');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
+
 }
 button {
   background: none;
