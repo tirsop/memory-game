@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+
+.web-title {
+  font-family: 'Qwitcher Grypen';
+  font-size: 100px;
+}
+
 .App {
   height: 100vh;
   max-width: 860px;

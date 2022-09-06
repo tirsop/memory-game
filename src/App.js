@@ -105,7 +105,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Magic Memory</h1>
+      <h1 className='web-title' >Countries & Capitals</h1>
       <button onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
