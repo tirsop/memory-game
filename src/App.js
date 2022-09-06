@@ -52,7 +52,16 @@ function App() {
     ))
     const shuffledCards = [...countryCards, ...capitalCards]
       .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }))
+    // .map(card => ( 
+    //   { ...card, id: Math.random() }
+    // ))
+
+    // add an id (1~12) that matches the numbers on the mapamundi image's title
+    for (let i = 0; i < shuffledCards.length; i++) {
+      shuffledCards[i] = { ...shuffledCards[i], id: i + 1 }
+    }
+
+
     setChoiceOne(null) // so choices are reset when pressing NewGame
     setChoiceTwo(null)
     setCards(shuffledCards)
@@ -66,7 +75,7 @@ function App() {
 
   // compare 2 selected cards
   useEffect(() => {
-    if (choiceOne && choiceTwo) {     // only execute code when we have the 2 choices
+    if (choiceOne && choiceTwo) {     // only runs if we have the 2 choices
       setDisabled(true)
       if (choiceOne.country === choiceTwo.country) {
         setCards(prevCards => {
