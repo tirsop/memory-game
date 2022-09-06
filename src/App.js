@@ -32,21 +32,19 @@ function App() {
 
   // function that return X random elements of an array
   const random = (array, elements) => {
+    const arrayCopy = array.map(element => element)   // so original array doesn't change with splice
     const result = []
     for (let i = 0; i < elements; i++) {
-      const element = Math.floor(Math.random() * array.length)
-      result.push(array[element])
-      array.splice(element, 1)
+      const element = Math.floor(Math.random() * arrayCopy.length)
+      result.push(arrayCopy[element])
+      arrayCopy.splice(element, 1)
     }
     return result
   }
 
-
-  // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
+  // func that randomly picks 6 countryCards, find their capitalCards, shuffle them and puts an id on each
   const shuffleCards = () => {
-    console.log({ countries })
     const countryCards = random(countries, 6)
-    console.log({ countryCards })
     const capitalCards = countryCards.map(country => (
       capitals.find(capital => (
         capital.country === country.country
