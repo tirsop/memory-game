@@ -52,15 +52,11 @@ function App() {
     ))
     const shuffledCards = [...countryCards, ...capitalCards]
       .sort(() => Math.random() - 0.5)
-    // .map(card => ( 
-    //   { ...card, id: Math.random() }
-    // ))
 
     // add an id (1~12) that matches the numbers on the mapamundi image's title
     for (let i = 0; i < shuffledCards.length; i++) {
       shuffledCards[i] = { ...shuffledCards[i], id: i + 1 }
     }
-
 
     setChoiceOne(null) // so choices are reset when pressing NewGame
     setChoiceTwo(null)

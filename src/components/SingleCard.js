@@ -15,7 +15,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
           <h3 className="">{card.country[0].toUpperCase()}{card.country.slice(1)}</h3>
           {/* <p className="population">Poplulation: {card.poplulation}</p> */}
         </div>
-        <img src="/img/mapamundi/image_part_001.jpg"
+        <img src={`/img/mapamundi/image_part_${card.id}.jpg`}
           className="back"
           alt="card back"
           onClick={handleClick} />
