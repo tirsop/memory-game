@@ -68,10 +68,10 @@ function App() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {     // only execute code when we have the 2 choices
       setDisabled(true)
-      if (choiceOne.src === choiceTwo.src) {
+      if (choiceOne.country === choiceTwo.country) {
         setCards(prevCards => {
           return prevCards.map(card => {
-            if (card.src === choiceOne.src) {
+            if (card.country === choiceOne.country) {
               return { ...card, matched: true }
             } else {
               return card
