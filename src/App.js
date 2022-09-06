@@ -1,15 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import './App.css'
-import SingleCard from './components/SingleCard';
+import SingleCard from './components/SingleCard'
 
 const cardImages = [
-  { "src": "/img/helmet-1.png", matched: false },
-  { "src": "/img/potion-1.png", matched: false },
-  { "src": "/img/ring-1.png", matched: false },
-  { "src": "/img/scroll-1.png", matched: false },
-  { "src": "/img/shield-1.png", matched: false },
-  { "src": "/img/sword-1.png", matched: false },
+  // { "src": "/img/helmet-1.png", matched: false },
+  // { "src": "/img/potion-1.png", matched: false },
+  // { "src": "/img/ring-1.png", matched: false },
+  // { "src": "/img/scroll-1.png", matched: false },
+  // { "src": "/img/shield-1.png", matched: false },
+  // { "src": "/img/sword-1.png", matched: false },
+
+  { "src": "/img/afghanistan.png", country: "afghanistan", capital: "kabul", matched: false },
+  { "src": "/img/albania.png", country: "albania", capital: "tirana", matched: false },
+  { "src": "/img/algeria.png", country: "algeria", capital: "algiers", matched: false },
+  { "src": "/img/armenia.png", country: "armenia", capital: "yerevan", matched: false },
+  { "src": "/img/australia.png", country: "australia", capital: "canberra", matched: false },
+  { "src": "/img/austria.png", country: "austria", capital: "Vienna", matched: false }
 ]
+
 
 function App() {
   const [cards, setCards] = useState([])
@@ -86,7 +94,7 @@ function App() {
       </div>
       <p>Turns: {turns}</p>
     </div>
-  );
+  )
 }
 
 export default App
