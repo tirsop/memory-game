@@ -1,7 +1,19 @@
 .card {
   position: relative;
-  border: 2px solid #fff;
-  border-radius: 6px;
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card img {
   width: 100%;
@@ -12,10 +24,15 @@
   transform: rotateY(90deg);
   transition: all ease-in 0.2s;
   position: absolute;
+  height: 100%;
 }
 .flipped .front {
   transform: rotateY(0deg);
   transition-delay: 0.2s;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .card .back {
   transition: all ease-in 0.2s;
