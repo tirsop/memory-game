@@ -2,20 +2,24 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
-const cardImages = [
-  // { "src": "/img/helmet-1.png", matched: false },
-  // { "src": "/img/potion-1.png", matched: false },
-  // { "src": "/img/ring-1.png", matched: false },
-  // { "src": "/img/scroll-1.png", matched: false },
-  // { "src": "/img/shield-1.png", matched: false },
-  // { "src": "/img/sword-1.png", matched: false },
-
+const countries = [
   { "src": "/img/afghanistan.png", country: "afghanistan", capital: "kabul", matched: false },
   { "src": "/img/albania.png", country: "albania", capital: "tirana", matched: false },
   { "src": "/img/algeria.png", country: "algeria", capital: "algiers", matched: false },
   { "src": "/img/armenia.png", country: "armenia", capital: "yerevan", matched: false },
   { "src": "/img/australia.png", country: "australia", capital: "canberra", matched: false },
-  { "src": "/img/austria.png", country: "austria", capital: "Vienna", matched: false }
+  { "src": "/img/austria.png", country: "austria", capital: "vienna", matched: false },
+  { "src": "/img/azrbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
+]
+
+const capitals = [
+  { "src": "/img/afghanistan.png", country: "afghanistan", capital: "kabul", matched: false },
+  { "src": "/img/albania.png", country: "albania", capital: "tirana", matched: false },
+  { "src": "/img/algeria.png", country: "algeria", capital: "algiers", matched: false },
+  { "src": "/img/armenia.png", country: "armenia", capital: "yerevan", matched: false },
+  { "src": "/img/australia.png", country: "australia", capital: "canberra", matched: false },
+  { "src": "/img/austria.png", country: "austria", capital: "Vienna", matched: false },
+  { "src": "/img/azrbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
 ]
 
 
@@ -28,7 +32,7 @@ function App() {
 
   // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
   const shuffleCards = () => {
-    const shuffledCards = [...cardImages, ...cardImages]
+    const shuffledCards = [...countries, ...capitals]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
     setChoiceOne(null) // so choices are reset when pressing NewGame

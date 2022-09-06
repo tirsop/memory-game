@@ -1,11 +1,12 @@
 .card {
   position: relative;
+  border: 2px solid #fff;
+  border-radius: 6px;
 }
 .card img {
   width: 100%;
   display: block;
-  border: 2px solid #fff;
-  border-radius: 6px;
+  border-radius: 2px 2px 0 0;
 }
 .card .front {
   transform: rotateY(90deg);
