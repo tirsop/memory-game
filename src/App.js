@@ -9,7 +9,7 @@ const countries = [
   { "src": "/img/armenia.png", country: "armenia", capital: "yerevan", matched: false },
   { "src": "/img/australia.png", country: "australia", capital: "canberra", matched: false },
   { "src": "/img/austria.png", country: "austria", capital: "vienna", matched: false },
-  { "src": "/img/azrbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
+  { "src": "/img/azerbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
 ]
 
 const capitals = [
@@ -19,7 +19,7 @@ const capitals = [
   { "src": "/img/armenia.png", country: "armenia", capital: "yerevan", matched: false },
   { "src": "/img/australia.png", country: "australia", capital: "canberra", matched: false },
   { "src": "/img/austria.png", country: "austria", capital: "Vienna", matched: false },
-  { "src": "/img/azrbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
+  { "src": "/img/azerbaijan.png", country: "azrbaijan", capital: "baku", matched: false },
 ]
 
 
@@ -44,7 +44,13 @@ function App() {
 
   // func that duplicates the images (so there are pairs), shuffle them and puts an id on each
   const shuffleCards = () => {
-    const shuffledCards = [...countries, ...capitals]
+    const countryCards = random(countries, 6)
+    const capitalCards = countryCards.map(country => (
+      capitals.find(capital => (
+        capital.country === country.country
+      ))
+    ))
+    const shuffledCards = [...countryCards, ...capitalCards]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
     setChoiceOne(null) // so choices are reset when pressing NewGame
