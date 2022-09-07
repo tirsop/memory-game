@@ -4,7 +4,7 @@
 
 .web-title {
   font-family: 'Qwitcher Grypen';
-  font-size: 100px;
+  font-size: 6rem;
   text-shadow: 10px 10px 30px #ff01cc;
 }
 
@@ -12,6 +12,7 @@
   height: 100vh;
   max-width: 860px;
   margin: 40px auto 0;
+  padding: 0 16px;
   background-image: url('../public/img/skyline.png');
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -20,7 +21,7 @@
 }
 button {
   font-family: 'Dancing Script';
-  font-size: 36px;
+  font-size: 2rem;
   text-shadow: 10px 10px 30px #ff01cc;
   background: none;
   padding: 6px 12px;
@@ -48,4 +49,14 @@ button:hover {
 	top: 0;
 	left: 0;
 	z-index: -1;
+}
+
+
+@media (max-width: 600px) {
+  .web-title {
+    font-size: 4rem;
+  }
+  button {
+    font-size: 1.4rem;
+  }
 }
