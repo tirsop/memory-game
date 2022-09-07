@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+// import background from './canvas.js'
 
 const countries = [
   { "src": "/img/afghanistan.png", country: "afghanistan", capital: "kabul", poplulation: "38.9million", matched: false },
@@ -101,26 +102,43 @@ function App() {
   // start a new game as soos as Ienter the page
   useEffect(() => {
     shuffleCards()
+    // background()
   }, [])
 
-  return (
-    <div className="App">
-      <h1 className='web-title' >Countries & Capitals</h1>
-      <button onClick={shuffleCards}>New Game</button>
 
-      <div className="card-grid">
-        {cards.map(card =>
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        )}
+
+  // useEffect(() => {
+  // const script = document.createElement('script')
+  // script.src = "./canvas.js"
+  // script.async = true
+  // document.body.appendChild(script)
+  // return () => {
+  //   document.body.removeChild(script)
+  // }
+  //   background()
+  // }, [])
+
+  return (
+    <>
+      <div className="App">
+        <canvas id="canvas"></canvas>
+        <h1 className='web-title' >Countries & Capitals</h1>
+        <button onClick={shuffleCards}>New Game</button>
+
+        <div className="card-grid">
+          {cards.map(card =>
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          )}
+        </div>
+        <p>Turns: {turns}</p>
       </div>
-      <p>Turns: {turns}</p>
-    </div>
+    </>
   )
 }
 

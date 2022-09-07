@@ -32,13 +32,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 20px;
 
+}
+
+.flipped .front,
+.card .back {
+  border-radius: 5px;
 }
 .card .back {
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
-  border-radius: 20px;
 }
 .flipped .back {
   transform: rotateY(90deg);

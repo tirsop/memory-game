@@ -38,3 +38,12 @@ button:hover {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
+
+
+#canvas {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
