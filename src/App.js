@@ -1,8 +1,12 @@
 import { useCallback } from 'react'
 import { useEffect, useState } from 'react'
-import './App.css'
-import SingleCard from './components/SingleCard'
+import random from './utils/random.js'
 // import background from './canvas.js'
+// styles
+import './App.css'
+// components
+import SingleCard from './components/SingleCard'
+// data
 import { countries, capitals } from './data.js'
 
 
@@ -12,20 +16,6 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false) // to prevent the user to make lots of clicks
-
-
-
-  // function that return X random elements of an array
-  const random = (array, elements) => {
-    const arrayCopy = array.map(element => element)   // so original array doesn't change with splice
-    const result = []
-    for (let i = 0; i < elements; i++) {
-      const element = Math.floor(Math.random() * arrayCopy.length)
-      result.push(arrayCopy[element])
-      arrayCopy.splice(element, 1)
-    }
-    return result
-  }
 
 
 
@@ -97,16 +87,7 @@ function App() {
     // background()
   }, [shuffleCards])
 
-  // useEffect(() => {
-  // const script = document.createElement('script')
-  // script.src = "./canvas.js"
-  // script.async = true
-  // document.body.appendChild(script)
-  // return () => {
-  //   document.body.removeChild(script)
-  // }
-  //   background()
-  // }, [])
+
 
   return (
     <>
