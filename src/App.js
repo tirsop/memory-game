@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
@@ -44,7 +45,7 @@ function App() {
   }
 
   // func that randomly picks 6 countryCards, find their capitalCards, shuffle them and puts an id on each
-  const shuffleCards = () => {
+  const shuffleCards = useCallback(() => {
     const countryCards = random(countries, 6)
     const capitalCards = countryCards.map(country => (
       capitals.find(capital => (
@@ -63,7 +64,7 @@ function App() {
     setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
-  }
+  }, [])
 
   // user choices and is assigned to the first or second choice
   const handleChoice = (card) => {
@@ -99,13 +100,11 @@ function App() {
     setDisabled(false)
   }
 
-  // start a new game as soos as Ienter the page
+  // start a new game as soos as user enters the page
   useEffect(() => {
     shuffleCards()
     // background()
-  }, [])
-
-
+  }, [shuffleCards])
 
   // useEffect(() => {
   // const script = document.createElement('script')
