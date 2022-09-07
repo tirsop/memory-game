@@ -12,6 +12,7 @@
 
 /* base styles */
 body {
+  height: 100%;
   font-family: 'Dancing Script';
   margin: 0;
   font-size: 16px;

@@ -6,7 +6,7 @@
   font-family: 'Qwitcher Grypen';
   font-size: 6rem;
   text-shadow: 10px 10px 30px #ff01cc;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .App {
@@ -14,7 +14,7 @@
   max-width: 860px;
   margin: 40px auto 0;
   padding: 0 16px;
-  background-image: url('../public/img/skyline.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url('../public/img/skyline.png');
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: contain;
@@ -26,6 +26,7 @@ button {
   text-shadow: 10px 10px 30px #ff01cc;
   background: none;
   padding: 6px 12px;
+  margin-bottom: 20px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -38,10 +39,11 @@ button:hover {
 .turns {
   font-size: 1.4rem;
   margin-top: 20px;
+  /* text-shadow: 1px 1px 4px black; */
+  text-shadow: 2px 2px 2px #000, -2px -1px 3px #000;
 }
 
 .card-grid {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
@@ -63,5 +65,17 @@ button:hover {
   }
   button {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-height: 900px) {
+  .App {
+    background-image: url('../public/img/skyline.png');
+  }
+  .web-title {
+    margin-bottom: 60px;
+  }
+  button {
+    margin-bottom: 40px;
   }
 }
