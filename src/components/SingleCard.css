@@ -1,6 +1,5 @@
 .card {
   position: relative;
-  box-shadow: 0 0 15px rgba(187, 0, 255, 0.7); 
 }
 .card img {
   width: 100%;
@@ -31,6 +30,7 @@
 .flipped .front,
 .card .back {
   border-radius: 5px;
+  box-shadow: 0 0 15px rgba(187, 0, 255, 0.7); 
 }
 .card .back {
   transition: all ease-in 0.2s;
