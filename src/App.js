@@ -21,8 +21,8 @@ function App() {
 
 
   // func that randomly picks 6 countryCards, find their capitalCards, shuffle them and puts an id on each
-  const shuffleCards = useCallback((difficulty) => {
-    const countryCards = random(countries, difficulty)
+  const shuffleCards = useCallback((num) => {
+    const countryCards = random(countries, num)
     const capitalCards = countryCards.map(country => (
       capitals.find(capital => (
         capital.country === country.country
@@ -88,8 +88,8 @@ function App() {
     // background()
   }, [shuffleCards, level])
 
-  const changeLevel = () => {
-    shuffleCards(6)
+  const changeLevel = (num) => {
+    shuffleCards(num)
   }
 
   return (
@@ -99,8 +99,8 @@ function App() {
         <h1 className='web-title' >Countries & Capitals</h1>
         <button onClick={() => shuffleCards(level)}>New Game</button>
         <div className="level">
-          <button className="level-btn" onClick={changeLevel}>Easy</button>
-          <button className="level-btn" onClick={changeLevel}>Hard</button>
+          <button className="level-btn" onClick={() => changeLevel(6)}>Easy</button>
+          <button className="level-btn" onClick={() => changeLevel(8)}>Hard</button>
         </div>
 
         <div className="card-grid">
