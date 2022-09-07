@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+
 
 .web-title {
+  font-family: 'Qwitcher Grypen';
   font-size: 100px;
   text-shadow: 10px 10px 30px #ff01cc;
 }
@@ -16,7 +19,6 @@
 
 }
 button {
-  /* font-family: 'Qwitcher Grypen'; */
   font-family: 'Dancing Script';
   font-size: 36px;
   text-shadow: 10px 10px 30px #ff01cc;
