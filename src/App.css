@@ -33,13 +33,11 @@ button {
   transition: all 0.5s;
 }
 button:hover {
-  /* background: #c23866; */
   color:  #ff01cc;
 }
 .turns {
   font-size: 1.4rem;
   margin-top: 20px;
-  /* text-shadow: 1px 1px 4px black; */
   text-shadow: 2px 2px 2px #000, -2px -1px 3px #000;
 }
 
@@ -68,7 +66,7 @@ button:hover {
   }
 }
 
-@media (min-height: 900px) {
+@media (min-height: 840px) {
   .App {
     background-image: url('../public/img/skyline.png');
   }
