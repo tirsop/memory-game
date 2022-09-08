@@ -14,7 +14,7 @@
   max-width: 860px;
   margin: 40px auto 0;
   padding: 0 16px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url('../public/img/skyline.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/img/skyline.png');
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: contain;
@@ -67,9 +67,9 @@ button:hover {
 }
 
 @media (min-height: 840px) {
-  .App {
+  /* .App {
     background-image: url('../public/img/skyline.png');
-  }
+  } */
   .web-title {
     margin-bottom: 60px;
   }
