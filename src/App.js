@@ -16,7 +16,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false) // to prevent the user to make lots of clicks
-  const [level, setLevel] = useState(6) // 6 pairs of cards is EASY level. 8 pair of cards is HARD level.
+  const [level, setLevel] = useState('easy') // 6 pairs of cards is EASY level. 8 pair of cards is HARD level.
 
 
 
@@ -31,7 +31,7 @@ function App() {
     const shuffledCards = [...countryCards, ...capitalCards]
       .sort(() => Math.random() - 0.5)
 
-    // add an id (1~12) that matches the numbers on the mapamundi image's title
+    // add an id (1~) that matches the numbers on the mapamundi image's title
     for (let i = 0; i < shuffledCards.length; i++) {
       shuffledCards[i] = { ...shuffledCards[i], id: i + 1 }
     }
@@ -82,14 +82,15 @@ function App() {
 
 
 
-  // start a new game as soos as user enters the page
+  // start a new EASY game as soos as user enters the page
   useEffect(() => {
-    shuffleCards(level)
+    level === 'easy' ? shuffleCards(6) : shuffleCards(8)
     // background()
   }, [shuffleCards, level])
 
-  const changeLevel = (num) => {
-    shuffleCards(num)
+  const changeLevel = (difficulty) => {
+    setLevel(difficulty)
+    level === 'easy' ? shuffleCards(6) : shuffleCards(8)
   }
 
   return (
@@ -97,10 +98,12 @@ function App() {
       <div className="App">
         <canvas id="canvas"></canvas>
         <h1 className='web-title' >Countries & Capitals</h1>
-        <button onClick={() => shuffleCards(level)}>New Game</button>
+
+        <button onClick={() => level === 'easy' ? shuffleCards(6) : shuffleCards(8)}>New Game</button>
+
         <div className="level">
-          <button className="level-btn" onClick={() => changeLevel(6)}>Easy</button>
-          <button className="level-btn" onClick={() => changeLevel(8)}>Hard</button>
+          <button className="level-btn" onClick={() => changeLevel('easy')}>Easy</button>
+          <button className="level-btn" onClick={() => changeLevel('hard')}>Hard</button>
         </div>
 
         <div className="card-grid">
@@ -111,6 +114,7 @@ function App() {
               handleChoice={handleChoice}
               flipped={card === choiceOne || card === choiceTwo || card.matched}
               disabled={disabled}
+              level={level}
             />
           )}
         </div>
