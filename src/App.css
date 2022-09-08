@@ -14,7 +14,7 @@
   max-width: 860px;
   margin: 40px auto 0;
   padding: 0 16px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url('../public/img/skyline.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/img/skyline.png');
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-size: contain;
@@ -26,7 +26,6 @@ button {
   text-shadow: 10px 10px 30px #ff01cc;
   background: none;
   padding: 6px 12px;
-  margin-bottom: 20px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -35,8 +34,14 @@ button {
 button:hover {
   color:  #ff01cc;
 }
+
+.level-btn {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
 .turns {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 20px;
   text-shadow: 2px 2px 2px #000, -2px -1px 3px #000;
 }
@@ -67,13 +72,13 @@ button:hover {
 }
 
 @media (min-height: 840px) {
-  .App {
+  /* .App {
     background-image: url('../public/img/skyline.png');
-  }
+  } */
   .web-title {
     margin-bottom: 60px;
   }
   button {
-    margin-bottom: 40px;
+    /* margin-bottom: 20px; */
   }
 }

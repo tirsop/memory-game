@@ -1,6 +1,6 @@
 import './SingleCard.css'
 
-export default function SingleCard({ card, handleChoice, flipped, disabled }) {
+export default function SingleCard({ card, handleChoice, flipped, disabled, level }) {
 
   const handleClick = () => {
     if (!disabled) {
@@ -15,10 +15,19 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
           {!card.isCountry && <h3 className="content">{card.capital[0].toUpperCase()}{card.capital.slice(1)}</h3>}
         </div>
 
-        <img src={`/img/mapamundi/image_part_${card.id}.jpg`}
-          className="back"
-          alt="card back"
-          onClick={handleClick} />
+        {level === 'easy' &&
+          <img src={`/img/mapamundi/image_part_${card.id}.jpg`}
+            className="back"
+            alt="card back"
+            onClick={handleClick} />
+        }
+        {level === 'hard' &&
+          <img src={`/img/mapamundi_hard/image_part_${card.id}.jpg`}
+            className="back"
+            alt="card back"
+            onClick={handleClick} />
+        }
+
       </div>
     </div >
   )
