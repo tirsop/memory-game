@@ -21,7 +21,9 @@ function App() {
 
 
   // func that randomly picks 6 countryCards, find their capitalCards, shuffle them and puts an id on each
-  const shuffleCards = useCallback((num) => {
+  const shuffleCards = useCallback((difficulty) => {
+    let num
+    difficulty === 'easy' ? num = 6 : num = 8
     const countryCards = random(countries, num)
     const capitalCards = countryCards.map(country => (
       capitals.find(capital => (
@@ -82,16 +84,12 @@ function App() {
 
 
 
-  // start a new EASY game as soos as user enters the page
+  // start a new game as soos as user enters the page
   useEffect(() => {
-    level === 'easy' ? shuffleCards(6) : shuffleCards(8)
+    shuffleCards(level)
     // background()
   }, [shuffleCards, level])
 
-  const changeLevel = (difficulty) => {
-    setLevel(difficulty)
-    level === 'easy' ? shuffleCards(6) : shuffleCards(8)
-  }
 
   return (
     <>
@@ -102,8 +100,8 @@ function App() {
         <button onClick={() => level === 'easy' ? shuffleCards(6) : shuffleCards(8)}>New Game</button>
 
         <div className="level">
-          <button className="level-btn" onClick={() => changeLevel('easy')}>Easy</button>
-          <button className="level-btn" onClick={() => changeLevel('hard')}>Hard</button>
+          <button className="level-btn" onClick={() => setLevel('easy')}>Easy</button>
+          <button className="level-btn" onClick={() => setLevel('hard')}>Hard</button>
         </div>
 
         <div className="card-grid">
