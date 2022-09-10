@@ -19,4 +19,12 @@ body {
   text-align: center;
   background: #000;
   color: #fff;
+  /* background-image: linear-gradient(#0006, #0006), url('../public/img/background.jpeg');
+  background-repeat: repeat;
+  background-size: 300px; */
+  background-image: linear-gradient(#0006, #0006), url('../public/img/bg_parchment.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
 }

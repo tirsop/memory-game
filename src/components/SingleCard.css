@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  --duration: 0.2s;
 }
 .card img {
   width: 100%;
@@ -8,7 +9,7 @@
 }
 .card .front {
   transform: rotateY(90deg);
-  transition: all ease-in 0.2s;
+  transition: all ease-in var(--duration);
   position: absolute;
   height: 100%;
   font-size: 2rem;
@@ -16,12 +17,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-size: cover;
 }
 .flipped .front {
   transform: rotateY(0deg);
-  transition-delay: 0.2s;
-  width: 100%;
-  background-size: cover;
+  transition-delay: var(--duration);
   background-position: center;
   background-repeat: no-repeat;
 
@@ -30,11 +31,11 @@
 .flipped .front,
 .card .back {
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(187, 0, 255, 0.7); 
+  /* box-shadow: 0 0 15px rgba(187, 0, 255, 0.7);  */
 }
 .card .back {
-  transition: all ease-in 0.2s;
-  transition-delay: 0.2s;
+  transition: all ease-out var(--duration);
+  transition-delay: var(--duration);
 }
 .flipped .back {
   transform: rotateY(90deg);

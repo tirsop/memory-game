@@ -97,11 +97,11 @@ function App() {
         <canvas id="canvas"></canvas>
         <h1 className='web-title' >Countries & Capitals</h1>
 
-        <button onClick={() => level === 'easy' ? shuffleCards(6) : shuffleCards(8)}>New Game</button>
+        <button onClick={() => shuffleCards(level)}>New Game</button>
 
         <div className="level">
-          <button className="level-btn" onClick={() => setLevel('easy')}>Easy</button>
-          <button className="level-btn" onClick={() => setLevel('hard')}>Hard</button>
+          <button className={level === 'easy' ? 'lv-selected lv-btn' : 'lv-btn'} onClick={() => setLevel('easy')}>Easy</button>
+          <button className={level === 'hard' ? 'lv-selected lv-btn' : 'lv-btn'} onClick={() => setLevel('hard')}>Hard</button>
         </div>
 
         <div className="card-grid">

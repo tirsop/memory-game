@@ -14,10 +14,7 @@
   max-width: 860px;
   margin: 40px auto 0;
   padding: 0 16px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../public/img/skyline.png');
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-size: contain;
+
 
 }
 button {
@@ -35,9 +32,13 @@ button:hover {
   color:  #ff01cc;
 }
 
-.level-btn {
+.lv-btn {
   font-size: 24px;
   margin-bottom: 40px;
+}
+.lv-selected {
+  color:  #e101ff;
+  cursor: auto;
 }
 
 .turns {
