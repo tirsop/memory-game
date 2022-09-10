@@ -14,10 +14,13 @@
   max-width: 860px;
   margin: 40px auto 0;
   padding: 0 16px;
-
-
 }
-button {
+.level {
+  display: flex;
+  justify-content: center;
+  gap:50px
+}
+/* button {
   font-family: 'Dancing Script';
   font-size: 2rem;
   text-shadow: 10px 10px 30px #ff01cc;
@@ -30,16 +33,16 @@ button {
 }
 button:hover {
   color:  #ff01cc;
-}
+} */
 
-.lv-btn {
+/* .lv-btn {
   font-size: 24px;
   margin-bottom: 40px;
 }
 .lv-selected {
   color:  #e101ff;
   cursor: auto;
-}
+} */
 
 .turns {
   font-size: 1.5rem;
@@ -48,6 +51,7 @@ button:hover {
 }
 
 .card-grid {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;

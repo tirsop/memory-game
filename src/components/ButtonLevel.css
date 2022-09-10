@@ -1,0 +1,18 @@
+.lv-btn {
+  background-image: url('../../public/img/btn-wood.png');
+  background-size: 100% 100%;
+  width: 100px;
+  height: 55px;
+  border: none;
+  background-color: transparent;
+  font-family: 'Dancing Script';
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  padding-bottom: 6px;
+  transition: all 0.2s;
+}
+
+.lv-btn:hover {
+  transform: translateY(-3px);
+}
