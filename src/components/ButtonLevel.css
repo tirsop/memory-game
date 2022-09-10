@@ -1,7 +1,7 @@
 .lv-btn {
   background-image: url('../../public/img/btn-wood.png');
   background-size: 100% 100%;
-  width: 100px;
+  /* width: 100px; */
   height: 55px;
   border: none;
   background-color: transparent;
@@ -9,8 +9,12 @@
   font-size: 1.6rem;
   color: #fff;
   text-shadow: 1px 1px 3px #000;
-  padding-bottom: 6px;
+  padding: 0 40px 6px;
   transition: all 0.2s;
+  cursor: pointer;
+  flex-shrink: 0;
+  filter: drop-shadow(3px 5px 2px #0005);
+  /* backdrop-filter: brightness(0.5); */
 }
 
 .lv-btn:hover {

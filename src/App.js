@@ -100,7 +100,8 @@ function App() {
         <h1 className='web-title' >Countries & Capitals</h1>
 
         {/* <button onClick={() => shuffleCards(level)}>New Game</button> */}
-        <ButtonLevel onClick={() => shuffleCards(level)}>New Game</ButtonLevel>
+        <ButtonLevel onClick={() => shuffleCards(level)} >New Game</ButtonLevel>
+        {/* style={{ width: '200px' }} */}
 
 
         <div className="level">
@@ -110,6 +111,7 @@ function App() {
           <ButtonLevel onClick={() => setLevel('hard')}>Hard</ButtonLevel>
         </div>
 
+        <p className='turns'>Turns: {turns}</p>
         <div className="card-grid">
           {cards.map(card =>
             <SingleCard
@@ -122,7 +124,6 @@ function App() {
             />
           )}
         </div>
-        <p className='turns'>Turns: {turns}</p>
       </div>
     </>
   )
