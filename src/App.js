@@ -5,6 +5,7 @@ import './App.css'
 // components
 import SingleCard from './components/SingleCard'
 import ButtonLevel from './components/ButtonLevel.jsx'
+import Footer from './components/Footer.jsx'
 // data
 import { countries, capitals } from './data.js'
 
@@ -116,6 +117,8 @@ function App() {
             />
           )}
         </div>
+
+        <Footer />
       </div>
     </>
   )
