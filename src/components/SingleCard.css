@@ -5,7 +5,6 @@
 .card img {
   width: 100%;
   display: block;
-  border-radius: 2px 2px 0 0;
 }
 .card .front {
   transform: rotateY(90deg);
@@ -30,8 +29,8 @@
 
 .flipped .front,
 .card .back {
-  border-radius: 5px;
-  /* box-shadow: 0 0 15px rgba(187, 0, 255, 0.7);  */
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px #000; 
 }
 .card .back {
   transition: all ease-out var(--duration);

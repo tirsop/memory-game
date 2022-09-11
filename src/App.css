@@ -3,7 +3,7 @@
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
   text-shadow: 10px 10px 30px #000000;
-  margin-top: 100px;
+  margin: 100px 0 10px;
   color: #fff;
 }
 
@@ -20,7 +20,7 @@
 .level {
   display: flex;
   justify-content: center;
-  gap:50px
+  gap:30px
 }
 .turns {
   font-size: 26px;
@@ -28,6 +28,9 @@
   text-shadow: 2px 2px 2px #000;
   align-self: end;
   margin-bottom: 10px;
+}
+#new-game-btn {
+  margin-bottom: 12px;
 }
 
 
@@ -46,7 +49,7 @@
   }
   .turns {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 22px;
   }
   .card-grid {
     grid-gap: 3px;

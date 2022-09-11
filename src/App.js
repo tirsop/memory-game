@@ -94,7 +94,7 @@ function App() {
       <div className="App">
         <h1 className='web-title' >Countries & Capitals</h1>
 
-        <ButtonLevel onClick={() => shuffleCards(level)} >New Game</ButtonLevel>
+        <ButtonLevel onClick={() => shuffleCards(level)} id='new-game-btn'>New Game</ButtonLevel>
         {/* style={{ width: '200px' }} */}
 
 
