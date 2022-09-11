@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 .web-title {
-  font-family: 'Qwitcher Grypen';
-  font-size: 6rem;
-  text-shadow: 10px 10px 30px #ff01cc;
-  margin-top: 40px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  text-shadow: 10px 10px 30px #000000;
+  margin-top: 100px;
+  color: #fff;
 }
 
 
@@ -22,7 +23,7 @@
   gap:50px
 }
 .turns {
-  font-size: 1.5rem;
+  font-size: 26px;
   margin-right: 0px;
   text-shadow: 2px 2px 2px #000;
   align-self: end;
@@ -40,16 +41,14 @@
 
 @media (max-width: 600px) {
   .web-title {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
   }
-  button {
-    font-size: 1.4rem;
+  .turns {
+    margin-top: 20px;
+    font-size: 20px;
   }
-}
-
-@media (min-height: 840px) {
-  .web-title {
-    margin-bottom: 60px;
+  .card-grid {
+    grid-gap: 3px;
   }
-
 }

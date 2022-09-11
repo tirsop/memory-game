@@ -16,7 +16,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled, leve
         </div>
 
         {level === 'easy' &&
-          <img src={`/img/mapamundi_easy/image_part_${card.id}.jpg`}
+          <img src={`/img/mapamundi_easy2/image_part_${card.id}.jpg`}
             className="back"
             alt="card back"
             onClick={handleClick} />
