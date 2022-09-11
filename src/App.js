@@ -1,13 +1,10 @@
-import { useCallback } from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import random from './utils/random.js'
-// import background from './canvas.js'
 // styles
 import './App.css'
 // components
 import SingleCard from './components/SingleCard'
 import ButtonLevel from './components/ButtonLevel.jsx'
-
 // data
 import { countries, capitals } from './data.js'
 
@@ -89,24 +86,18 @@ function App() {
   // start a new game as soos as user enters the page
   useEffect(() => {
     shuffleCards(level)
-    // background()
   }, [shuffleCards, level])
 
 
   return (
     <>
       <div className="App">
-        <canvas id="canvas"></canvas>
         <h1 className='web-title' >Countries & Capitals</h1>
 
-        {/* <button onClick={() => shuffleCards(level)}>New Game</button> */}
         <ButtonLevel onClick={() => shuffleCards(level)} >New Game</ButtonLevel>
         {/* style={{ width: '200px' }} */}
 
-
         <div className="level">
-          {/* <button className={level === 'easy' ? 'lv-selected lv-btn' : 'lv-btn'} onClick={() => setLevel('easy')}>Easy</button> */}
-          {/* <button className={level === 'hard' ? 'lv-selected lv-btn' : 'lv-btn'} onClick={() => setLevel('hard')}>Hard</button> */}
           <ButtonLevel onClick={() => setLevel('easy')}>Easy</ButtonLevel>
           <ButtonLevel onClick={() => setLevel('hard')}>Hard</ButtonLevel>
         </div>

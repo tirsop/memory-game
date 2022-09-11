@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
-
-
 .web-title {
   font-family: 'Qwitcher Grypen';
   font-size: 6rem;
   text-shadow: 10px 10px 30px #ff01cc;
   margin-bottom: 0px;
 }
+
+
 
 .App {
   height: 100vh;
@@ -23,30 +22,6 @@
   justify-content: center;
   gap:50px
 }
-/* button {
-  font-family: 'Dancing Script';
-  font-size: 2rem;
-  text-shadow: 10px 10px 30px #ff01cc;
-  background: none;
-  padding: 6px 12px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-button:hover {
-  color:  #ff01cc;
-} */
-
-/* .lv-btn {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-.lv-selected {
-  color:  #e101ff;
-  cursor: auto;
-} */
-
 .turns {
   font-size: 1.5rem;
   margin-right: 0px;
@@ -55,20 +30,13 @@ button:hover {
   margin-bottom: 10px;
 }
 
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 
-
-#canvas {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
 
 
 @media (max-width: 600px) {
@@ -81,13 +49,8 @@ button:hover {
 }
 
 @media (min-height: 840px) {
-  /* .App {
-    background-image: url('../public/img/skyline.png');
-  } */
   .web-title {
     margin-bottom: 60px;
   }
-  button {
-    /* margin-bottom: 20px; */
-  }
+
 }
