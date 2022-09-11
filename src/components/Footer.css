@@ -1,3 +1,6 @@
+footer {
+  margin-top: auto;
+}
 .copyright {
   margin-top: 48px;
   text-align:center;
@@ -8,8 +11,9 @@
 .madeby{
   text-align: center;
   padding-top: 8px;
-  font-size: 12px;
-  color: gray;
+  font-size: 16px;
+  text-shadow: 1px 1px 3px #000000;
+  color: #fff;
   margin-bottom: 0;
 }
 .tirsop {
@@ -20,6 +24,7 @@
   width: 40px;
   height: auto;
   border-radius: 50%;
+  box-shadow: 1px 1px 3px #000000;
   transform: scale(1);
   filter: brightness(80%);
   transition: transform 0.5s, filter 0.5s;

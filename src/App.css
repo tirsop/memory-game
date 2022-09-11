@@ -17,6 +17,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .level {
   display: flex;
   justify-content: center;
