@@ -3,15 +3,14 @@
   font-family: 'Qwitcher Grypen';
   font-size: 6rem;
   text-shadow: 10px 10px 30px #ff01cc;
-  margin-bottom: 0px;
+  margin-top: 40px;
 }
-
 
 
 .App {
   height: 100vh;
   max-width: 860px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   padding: 0 16px;
   display: flex;
   flex-direction: column;

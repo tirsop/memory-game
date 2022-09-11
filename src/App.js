@@ -97,9 +97,10 @@ function App() {
         <ButtonLevel onClick={() => shuffleCards(level)} >New Game</ButtonLevel>
         {/* style={{ width: '200px' }} */}
 
+
         <div className="level">
-          <ButtonLevel onClick={() => setLevel('easy')}>Easy</ButtonLevel>
-          <ButtonLevel onClick={() => setLevel('hard')}>Hard</ButtonLevel>
+          <ButtonLevel onClick={() => setLevel('easy')} id={level === 'easy' ? 'lv-selected' : ''}>Easy</ButtonLevel>
+          <ButtonLevel onClick={() => setLevel('hard')} id={level === 'hard' ? 'lv-selected' : ''}>Hard</ButtonLevel>
         </div>
 
         <p className='turns'>Turns: {turns}</p>
